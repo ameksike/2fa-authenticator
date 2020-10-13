@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Authenticator</title>
+</head>
+
+<body>
+
+    <div>
+        <h3>Demo for use Authenticators</h3>
+        <div class="qrcode"> <img src="{qrsrc}"> </div> <br>
+        <label for="fname">Secret CODE:</label><br>
+        <input type="text" id="tocken" name="tocken" value="{secret}">
+    </div><br>
+
+
+    <form action="/verify" method="post">
+        <label for="fname">Tocken:</label><br>
+        <input type="text" id="token" name="token" value="{token}"><br>
+        <label for="fname">Expected:</label><br>
+        <input type="text" id="expected" name="expected" value="{expected}"><br>
+        <input type="submit" value="Verify">
+    </form><br>
+
+    <form action="/generate" method="post">
+        <label for="fname">User ID:</label><br>
+        <input type="text" id="user" name="user" value='{user}'><br>
+        <label for="fname">Service ID:</label><br>
+        <input type="text" id="service" name="service" value="{service}"><br>
+        <input type="submit" value="Generate">
+    </form><br>
+
+    <span>Verify:</span>
+    <h2>{verify}</h2>
+
+</body>
+
+</html>
