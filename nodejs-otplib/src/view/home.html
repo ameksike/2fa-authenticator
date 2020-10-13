@@ -12,6 +12,7 @@
         <label for="fname">Secret CODE:</label><br>
         <input type="text" id="tocken" name="tocken" value="{secret}">
     </div><br>
+    <hr>
 
 
     <form action="/verify" method="post">
@@ -21,6 +22,7 @@
         <input type="text" id="expected" name="expected" value="{expected}"><br>
         <input type="submit" value="Verify">
     </form><br>
+    <hr>
 
     <form action="/generate" method="post">
         <label for="fname">User ID:</label><br>
@@ -29,14 +31,17 @@
         <input type="text" id="service" name="service" value="{service}"><br>
         <input type="submit" value="Generate">
     </form><br>
+    <hr>
 
     <span>Verify:</span>
     <h2>{verify}</h2>
+    <hr>
 
     <ul>
         <li><a href="https://es.altapps.net/soft/2fa-authenticator-2fas-">2FA AUTHENTICATOR (2FAS) for Android</a></li>
         <li><a href="https://es.altapps.net/soft/google-authenticator">GOOGLE AUTHENTICATOR for Android</a></li>
     </ul>
+    <hr>
     
 </body>
 

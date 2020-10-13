@@ -1,17 +1,18 @@
 <html>
 
 <head>
-    <title>Authenticator</title>
+    <title>2FA Demo based on NodeJs, Express and Axios</title>
 </head>
 
 <body>
 
     <div>
-        <h3>Demo for use Authenticators</h3>
+        <h3>2FA Demo based on NodeJs, Express and Axios</h3>
         <div class="qrcode"> <img src="{qrsrc}"> </div> <br>
         <label for="fname">Secret CODE:</label><br>
         <input type="text" id="tocken" name="tocken" value="{secret}">
     </div><br>
+    <hr>
 
 
     <form action="/verify" method="post">
@@ -19,35 +20,28 @@
         <input type="text" id="token" name="token" value="{token}"><br>
         <label for="fname">Expected:</label><br>
         <input type="text" id="expected" name="expected" value="{expected}"><br>
-        <label for="fname">Select LIB:</label><br>
-        <select name="lib">
-            <option value="OTP" selected>OTPLib</option>
-            <option value="OTPAUTH">OTPAUTH</option>
-            <option value="Speakeasy">Speakeasy</option>
-            <option value="GoogleAPI">Google API</option>
-        </select><br>
         <input type="submit" value="Verify">
     </form><br>
+    <hr>
 
     <form action="/generate" method="post">
         <label for="fname">User ID:</label><br>
         <input type="text" id="user" name="user" value='{user}'><br>
         <label for="fname">Service ID:</label><br>
         <input type="text" id="service" name="service" value="{service}"><br>
-        <label for="fname">Select LIB:</label><br>
-        <select name="lib">
-            <option value="OTP" selected>OTPLib</option>
-            <option value="OTPAUTH">OTPAUTH</option>
-            <option value="Speakeasy">Speakeasy</option>
-            <option value="GoogleAPI">Google API</option>
-        </select><br>
         <input type="submit" value="Generate">
     </form><br>
-
+    <hr>
 
     <span>Verify:</span>
     <h2>{verify}</h2>
+    <hr>
 
+    <ul>
+        <li><a href="https://es.altapps.net/soft/2fa-authenticator-2fas-">2FA AUTHENTICATOR (2FAS) for Android</a></li>
+        <li><a href="https://es.altapps.net/soft/google-authenticator">GOOGLE AUTHENTICATOR for Android</a></li>
+    </ul>
+    <hr>
 </body>
 
 </html>
