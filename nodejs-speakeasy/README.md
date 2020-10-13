@@ -5,6 +5,9 @@ Two-factor authentication (also known as 2FA) is a type, or subset, of multi-fac
 # INSTALL steps 
 - npm install qrcode express body-parser
 - npm install --save-dev nodemon
-- npm install speakeasy
+- npm install [speakeasy](https://www.npmjs.com/package/speakeasy) 
+
+
+
 
 
